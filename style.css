@@ -1,83 +1,227 @@
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-body {
-    background: #ffffff;
-}
+/* ===== TOP BAR ===== */
 
-/* Navbar */
-header {
+.top-bar {
+    background: #1f2d36;
+    color: #ddd;
+    font-size: 14px;
+    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+}
+
+.top-bar span {
+    color: #ffae00;
+}
+
+.top-bar .social a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* ===== HEADER ===== */
+.hearder-part{
+ background-image:url('assets/images/heading-bg.jpg');
+}
+
+.main-header {
+	
+    background: rgba(0, 0, 0, 0.2);
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     font-size: 26px;
     font-weight: bold;
-    color: #1c92ff;
+    color: white;
 }
 
-nav a {
-    margin: 0 15px;
+.nav-menu a,
+.nav-menu button {
+    margin-left: 30px;
+    color: white;
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-.sign-btn {
-    padding: 10px 20px;
-    background: #4f42ff;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 50px;
-    background: linear-gradient(to right, #3b7df7, #51e7ff);
-    color: #fff;
-    border-bottom-left-radius: 80px;
-    border-bottom-right-radius: 80px;
-}
-
-.left {
-    width: 50%;
-}
-
-.left h1 {
-    font-size: 45px;
     font-weight: bold;
-    margin-bottom: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
 }
 
-.left p {
-    font-size: 16px;
-    margin-bottom: 20px;
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.buttons .btn {
-    margin-right: 15px;
-    padding: 12px 22px;
+.dropdown-content {
+    display: none;
+    position: absolute;
     background: #fff;
     color: #333;
-    border-radius: 25px;
-    cursor: pointer;
-    border: none;
+    top: 25px;
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Right Image */
-.right img {
-    width: 350px;
-    border-radius: 25px;
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Background (as in screenshot) */
+
+body {
+    background: url('https://via.placeholder.com/1600x400') center/cover no-repeat;
+}
+
+/* background area */
+.filter-area {
+    background: #1f2a2b;   /* dark background */
+    padding: 35px 0;
+    text-align: center;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="%231a2222" stroke-width="1"><path d="M4 7h16M4 12h16M4 17h16"/></svg>');
+    background-repeat: repeat;
+    background-size: 200px;
+}
+
+/* buttons */
+.filter-btn {
+    background: #ffffff;
+    border: none;
+    padding: 14px 30px;
+    margin: 0 8px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    color: #333;
+}
+
+/* active red button */
+.filter-btn.active {
+    background: #b22a26;
+    color: #fff;
+}
+
+/* hover effect */
+.filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+:root{
+  --bg-color: #1f2a2b;         /* dark footer base */
+  --overlay: rgba(0,0,0,0.45); /* subtle overlay (if needed) */
+  --border: rgba(255,255,255,0.06); /* thin top border */
+  --text-muted: rgba(255,255,255,0.65);
+  --accent: #f6a623;           /* highlight color for link */
+  --font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:var(--font-family);
+  background:#fff;
+  color:#222;
+}
+
+/* FOOTER */
+.site-footer{
+  background-color: var(--bg-color);
+  color: #fff;
+  position: relative;
+  padding: 28px 18px;
+  border-top: 1px solid var(--border);
+  /* background pattern image (optional). Replace URL or remove if not needed */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="%231a2222" stroke-width="1"><path d="M4 7h16M4 12h16M4 17h16"/></svg>');
+  background-repeat: repeat;
+  background-size: 220px;
+  /* slight overlay effect by using background blend (optional) */
+  background-blend-mode: overlay;
+}
+
+/* inner container centers and limits width */
+.footer-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* small thin top rule like image */
+.site-footer::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.04);
+}
+
+/* text styles */
+.site-footer p{
+  margin: 6px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: .3px;
+}
+
+/* design line keeps spacing and accent link */
+.design{
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* link styling */
+.design-link{
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: .4px;
+  transition: opacity .15s ease, transform .12s ease;
+}
+.design-link:hover{
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* responsive: on larger screens show in single row */
+@media (min-width:720px){
+  .footer-inner{
+    flex-direction: row;
+    justify-content: center;
+  }
+  .copyright{
+    margin-right: 14px;
+  }
+}
+
+/* optional small subtle shadow on top */
+.site-footer{
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
 }
